@@ -3,7 +3,7 @@
 create table booking_exportacion (
     id uuid primary key default gen_random_uuid(),
     tenant_id uuid,
-    exportacion_id uuid,
+    exportacion_id uuid references exportaciones(id),
     
     -- Identificación
     booking_no text,
